@@ -86,6 +86,33 @@ li::marker { color: var(--a1); }
 .chips li { border: 1px solid var(--line); border-radius: 999px; padding: .25rem .85rem; font-size: .97rem; background: rgba(255,255,255,.04); transition: transform .25s, border-color .25s, box-shadow .25s, background .25s; }
 .chips li:hover { transform: translateY(-3px) scale(1.06); border-color: var(--a1); background: color-mix(in srgb, var(--a1) 14%, transparent); box-shadow: 0 0 18px -2px var(--a1); }
 
+/* Colour pass: multi-hue palette */
+:root { --bg: #0a0612; --muted: #a79cc4; --line: rgba(167,156,196,.24); --c1: #22d3ee; --c2: #a78bfa; --c3: #f472b6; --c4: #fb923c; --c5: #facc15; --c6: #4ade80; }
+html::before { content: ""; position: fixed; top: 35vh; left: 30vw; width: 45vmax; height: 45vmax; border-radius: 50%; filter: blur(100px); opacity: .22; z-index: 0; pointer-events: none; background: radial-gradient(circle, var(--c3), var(--c4) 45%, transparent 70%); animation: drift3 30s ease-in-out infinite alternate; }
+@keyframes drift3 { to { transform: translate(-20vmax, 12vmax) scale(1.25); } }
+.side { background: rgba(10,6,18,.55); }
+h1 span { background-image: linear-gradient(100deg, var(--c1), var(--c2), var(--c3), var(--c4), var(--c5), var(--c1)); }
+h2::after { background: linear-gradient(90deg, var(--c1), var(--c3), var(--c4)); box-shadow: 0 0 14px var(--c3); }
+
+/* Each tab has its own colour */
+#tab-about { --t: var(--c1); } #tab-experience { --t: var(--c2); } #tab-education { --t: var(--c6); }
+#tab-skills { --t: var(--c5); } #tab-projects { --t: var(--c3); } #tab-dance { --t: var(--c4); } #tab-community { --t: var(--c6); }
+.tabs button::after { content: ""; position: absolute; right: .9rem; top: 50%; width: 8px; height: 8px; margin-top: -4px; border-radius: 50%; background: var(--t); opacity: .55; box-shadow: 0 0 8px var(--t); transition: opacity .25s, transform .25s; }
+.tabs button:hover::after, .tabs button[aria-selected="true"]::after { opacity: 1; transform: scale(1.4); }
+.tabs button[aria-selected="true"] { background: linear-gradient(90deg, color-mix(in srgb, var(--t) 30%, transparent), transparent); }
+.tabs button[aria-selected="true"]::before { background: var(--t); box-shadow: 0 0 12px var(--t); }
+
+/* Cards and chips cycle through the palette */
+.entry { --e: var(--c1); border-left: 4px solid var(--e); }
+.entry:nth-of-type(6n+2) { --e: var(--c2); } .entry:nth-of-type(6n+3) { --e: var(--c3); } .entry:nth-of-type(6n+4) { --e: var(--c4); }
+.entry:nth-of-type(6n+5) { --e: var(--c5); } .entry:nth-of-type(6n) { --e: var(--c6); }
+.when { color: var(--e); }
+.entry:hover { border-color: var(--e); box-shadow: 0 10px 40px -12px var(--e), inset 0 0 30px -20px var(--e); }
+.chips li { --e: var(--c1); border-color: color-mix(in srgb, var(--e) 55%, transparent); background: color-mix(in srgb, var(--e) 10%, transparent); }
+.chips li:nth-child(6n+2) { --e: var(--c2); } .chips li:nth-child(6n+3) { --e: var(--c3); } .chips li:nth-child(6n+4) { --e: var(--c4); }
+.chips li:nth-child(6n+5) { --e: var(--c5); } .chips li:nth-child(6n) { --e: var(--c6); }
+.chips li:hover { border-color: var(--e); background: color-mix(in srgb, var(--e) 24%, transparent); box-shadow: 0 0 18px -2px var(--e); }
+
 /* Mobile */
 @media (max-width: 860px) {
   .layout { grid-template-columns: 1fr; }
