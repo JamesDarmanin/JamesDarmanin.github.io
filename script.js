@@ -44,15 +44,15 @@
 
   /* Typing roles */
   var el = document.getElementById('typed');
-  var roles = ['Game programmer', 'AI developer', 'Interactive media', 'Hip-hop dancer'];
+  var roles = ['Game programmer', 'AI developer', 'Software Developer', 'Hip-hop dancer'];
   var r = 0, c = roles[0].length, del = true;
   (function type() {
     var word = roles[r];
     c += del ? -1 : 1;
     el.textContent = word.slice(0, c);
-    var wait = 70;
-    if (!del && c === word.length) { del = true; wait = 1600; }
-    else if (del && c === 0) { del = false; r = (r + 1) % roles.length; wait = 350; }
+    var wait = 150;
+    if (!del && c === word.length) { del = true; wait = 2000; }
+    else if (del && c === 0) { del = false; r = (r + 1) % roles.length; wait = 500; }
     setTimeout(type, del ? 35 : wait);
   })();
 
