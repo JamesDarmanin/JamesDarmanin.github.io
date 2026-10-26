@@ -87,8 +87,6 @@ li::marker { color: var(--a1); }
 
 /* Colour pass: multi-hue palette */
 :root { --bg: #0a0612; --muted: #a79cc4; --line: rgba(167,156,196,.24); --c1: #22d3ee; --c2: #a78bfa; --c3: #f472b6; --c4: #fb923c; --c5: #facc15; --c6: #4ade80; }
-html::before { content: ""; position: fixed; top: 35vh; left: 30vw; width: 45vmax; height: 45vmax; border-radius: 50%; filter: blur(100px); opacity: .22; z-index: 0; pointer-events: none; background: radial-gradient(circle, var(--c3), var(--c4) 45%, transparent 70%); animation: drift3 30s ease-in-out infinite alternate; }
-@keyframes drift3 { to { transform: translate(-20vmax, 12vmax) scale(1.25); } }
 .side { background: rgba(10,6,18,.55); }
 h1 span { background-image: linear-gradient(100deg, var(--c1), var(--c2), var(--c3), var(--c4), var(--c5), var(--c1)); }
 h2::after { background: linear-gradient(90deg, var(--c1), var(--c3), var(--c4)); box-shadow: 0 0 14px var(--c3); }
