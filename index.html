@@ -7,17 +7,19 @@
 <meta name="description" content="CV of James Darmanin: game programming, AI, interactive media and dance.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <script src="script.js" defer></script>
 </head>
 <body>
+<canvas id="bg" aria-hidden="true"></canvas>
+<div class="glow" aria-hidden="true"></div>
 <div class="layout">
 
   <aside class="side">
     <div class="id">
       <h1><span>James</span> <span>Darmanin</span></h1>
-      <p class="role">Game programmer · AI · interactive media · dancer</p>
+      <p class="role" aria-label="Game programmer, AI, interactive media, dancer"><span id="typed">Game programmer</span><span class="caret" aria-hidden="true"></span></p>
     </div>
 
     <nav class="tabs" role="tablist" aria-label="CV sections">
@@ -42,8 +44,8 @@
 
     <section id="about" role="tabpanel" aria-labelledby="tab-about" class="panel active">
       <h2>About</h2>
-      <p>HAI</p>
-      <p>In 2025 I spent six months as a junior softwar engineer, building websites with React and JavaScript. Outside of tech, I've trained in hip-hop, freestyle and commercial dance for over ten years.</p>
+      <p>I'm an M.Sc. Digital Games student at the University of Malta, with a B.Sc. (Hons) in Information Technology (Software Development). My work covers game programming, AI and interactive media.</p>
+      <p>In 2025 I spent six months as a junior software engineer, building websites with React and JavaScript. Outside of tech, I've trained in hip-hop, freestyle and commercial dance for over ten years.</p>
       <p class="muted">Hobbies: dancing, drawing, technology.</p>
     </section>
 
