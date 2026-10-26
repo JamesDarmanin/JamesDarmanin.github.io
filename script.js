@@ -65,7 +65,6 @@
     for (var i = 0; i < n; i++) pts.push({ x: Math.random() * cv.width, y: Math.random() * cv.height, vx: (Math.random() - .5) * .35, vy: (Math.random() - .5) * .35 });
   }
   size(); window.addEventListener('resize', size);
-  window.addEventListener('pointermove', function (e) { mouse.x = e.clientX; mouse.y = e.clientY; });
   function frame() {
     var col = getComputedStyle(document.body).getPropertyValue('--a1').trim() || '#22d3ee';
     ctx.clearRect(0, 0, cv.width, cv.height);
@@ -80,8 +79,6 @@
         var q = pts[j], d = Math.hypot(p.x - q.x, p.y - q.y);
         if (d < 130) { ctx.globalAlpha = (1 - d / 130) * .25; ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(q.x, q.y); ctx.stroke(); }
       }
-      var dm = Math.hypot(p.x - mouse.x, p.y - mouse.y);
-      if (dm < 160) { ctx.globalAlpha = (1 - dm / 160) * .5; ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(mouse.x, mouse.y); ctx.stroke(); }
     }
     requestAnimationFrame(frame);
   }
