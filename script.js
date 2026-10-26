@@ -56,13 +56,6 @@
     setTimeout(type, del ? 35 : wait);
   })();
 
-  /* Cursor glow */
-  var glow = document.querySelector('.glow');
-  window.addEventListener('pointermove', function (e) {
-    glow.style.setProperty('--mx', e.clientX + 'px');
-    glow.style.setProperty('--my', e.clientY + 'px');
-  });
-
   /* Particle network */
   var cv = document.getElementById('bg'), ctx = cv.getContext('2d'), pts = [], mouse = { x: -999, y: -999 };
   function size() {
