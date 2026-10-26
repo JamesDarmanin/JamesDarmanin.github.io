@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>James Darmanin – CV</title>
+<meta name="description" content="CV of James Darmanin: game programming, AI and interactive media.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #eef2f6;
+    --ink: #14213d;
+    --muted: #55637d;
+    --line: #c5cfdd;
+    --accent: #0b6e99;
+    --display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+    --body: "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #0f1726; --ink: #e8edf5; --muted: #9aa9c2; --line: #2a3a56; --accent: #58b8e0; }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 400 1.0625rem/1.6 var(--body); }
+  a { color: var(--accent); }
+  a:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+  .page { max-width: 1040px; margin: 0 auto; padding: 4rem 1.5rem; display: grid; grid-template-columns: 300px 1fr; gap: 4rem; }
+  aside { position: sticky; top: 3rem; align-self: start; }
+  h1 { font: 800 clamp(3rem, 7vw, 4.5rem)/0.95 var(--display); letter-spacing: -0.03em; margin: 0 0 1.25rem; }
+  .role { font: 500 1.2rem/1.35 var(--display); margin: 0 0 1.5rem; }
+  aside ul { list-style: none; padding: 0; margin: 0; color: var(--muted); }
+  aside li { margin-bottom: 0.35rem; }
+  h2 { font: 800 1.5rem/1.2 var(--display); margin: 0 0 1.25rem; letter-spacing: -0.01em; }
+  section { margin-bottom: 3.5rem; }
+  .entry { display: grid; grid-template-columns: 8rem 1fr; gap: 1.5rem; padding: 1.1rem 0; border-top: 1px solid var(--line); }
+  .when { color: var(--muted); font-size: 0.95rem; }
+  .entry h3 { font: 500 1.15rem/1.3 var(--display); margin: 0 0 0.25rem; }
+  .entry p { margin: 0.25rem 0 0; }
+  .where { color: var(--muted); }
+  .skills { display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0; list-style: none; margin: 0; }
+  .skills li { border: 1px solid var(--line); border-radius: 4px; padding: 0.2rem 0.65rem; font-size: 0.97rem; }
+  @media (max-width: 800px) {
+    .page { grid-template-columns: 1fr; gap: 2.5rem; padding: 2.5rem 1.25rem; }
+    aside { position: static; }
+    .entry { grid-template-columns: 1fr; gap: 0.2rem; }
+  }
+  @media print { aside { position: static; } body { background: #fff; color: #000; } }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <aside>
+    <h1>James Darmanin</h1>
+    <p class="role">Game programmer working on AI and interactive media</p>
+    <ul>
+      <li>Malta</li>
+      <li><a href="mailto:your.email@example.com">james.darmanin27@gmail.com</a></li>
+      <li><a href="https://github.com/your-username">github.com/your-username</a></li>
+      <li><a href="https://www.linkedin.com/in/your-profile">LinkedIn</a></li>
+      <li><a href="cv.pdf" download>Download CV (PDF)</a></li>
+    </ul>
+  </aside>
+
+  <main>
+    <section id="about">
+      <h2>About</h2>
+      <p>I'm an M.Sc. Digital Games student at the Institute of Digital Games, University of Malta, with a background in software development. My work covers game programming, AI and interactive media. Replace this paragraph with two or three sentences in your own words.</p>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="entry">
+        <div class="when">2025 – present</div>
+        <div>
+          <h3>M.Sc. Digital Games</h3>
+          <div class="where">Institute of Digital Games, University of Malta</div>
+          <p>Dissertation topic or key modules go here.</p>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="when">Start – End</div>
+        <div>
+          <h3>B.Sc. Information Technology (Software Development)</h3>
+          <div class="where">Institution name</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="entry">
+        <div class="when">Start – End</div>
+        <div>
+          <h3>Job title</h3>
+          <div class="where">Employer</div>
+          <p>One or two lines on what you did and what came out of it.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="entry">
+        <div class="when">Year</div>
+        <div>
+          <h3><a href="https://github.com/your-username/your-repo">Project name</a></h3>
+          <p>What it is, what you built, and the tools you used.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul class="skills">
+        <li>Game programming</li>
+        <li>Artificial intelligence</li>
+        <li>Interactive media</li>
+        <li>Add your languages and tools</li>
+      </ul>
+    </section>
+  </main>
+
+</div>
+</body>
+</html>
