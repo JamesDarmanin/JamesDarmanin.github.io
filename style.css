@@ -34,7 +34,7 @@ body::after { bottom: -25vmax; right: -15vmax; background: radial-gradient(circl
 /* Layout */
 .layout { position: relative; z-index: 1; display: grid; grid-template-columns: 330px 1fr; min-height: 100vh; }
 .side { position: sticky; top: 0; height: 100vh; padding: 3rem 2rem 2rem; display: flex; flex-direction: column; gap: 2rem; border-right: 1px solid var(--line); background: rgba(6,10,24,.55); backdrop-filter: blur(14px); }
-.content { padding: 3.5rem 4rem; max-width: 54rem; }
+.content { padding: 1.5rem 4rem; max-width: 54rem; }
 
 /* Name */
 h1 { font: 700 clamp(2.8rem, 5vw, 3.6rem)/1 var(--display); letter-spacing: -0.03em; margin: 0 0 1rem; }
